@@ -1,5 +1,31 @@
-# Vue 3 + TypeScript + Vite
+# Manuals Admin
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Vue 3와 Element Plus 기반의 백오피스 화면입니다. 사이드바 내비게이션과 주요 업무 보드를 제공하여 메뉴, 사용자, 권한 등을 한 곳에서 관리할 수 있습니다.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## 실행 방법
+
+```powershell
+npm install
+npm run dev
+```
+
+프로덕션 번들은 `npm run build`로 생성할 수 있으며, 결과물은 `dist/` 폴더에 출력됩니다.
+
+## 주요 기능
+
+- **고정 사이드바 내비게이션**: 메뉴 관리, 사용자 관리, 그룹 관리 등 8개 핵심 영역을 빠르게 전환.
+- **상황판 위젯**: 각 영역의 핵심 지표와 권장 작업을 카드 형태로 시각화.
+- **운영 가이드**: 체크리스트와 운영 규칙을 Collapse 형태로 제공해 신규 담당자 온보딩 지원.
+- **Element Plus + 한국어 로케일**: 공용 컴포넌트와 UI 컨벤션을 일관되게 유지.
+
+## 폴더 구조
+
+- `src/App.vue`: 전체 레이아웃과 메뉴 데이터 정의.
+- `src/components/MenuContentPanel.vue`: 메뉴별 현황, 작업, 가이드 UI.
+- `src/types/admin.ts`: 백오피스 데이터 모델 타입 정의.
+
+## 추후 확장 아이디어
+
+- 메뉴별 실제 API 연동 및 데이터 바인딩.
+- 역할 기반 접근 제어(RBAC)와 라우팅 연계.
+- 지표 카드에 트렌드 그래프, 알림, 배포 히스토리 추가.
