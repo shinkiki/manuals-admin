@@ -1,13 +1,13 @@
 <template>
   <div class="menu-content">
-    <section v-if="menu.highlights.length" class="content-section">
+    <section v-if="menu.highlights?.length" class="content-section">
       <div class="section-header">
         <h2>운영 현황</h2>
         <span>핵심 지표를 한눈에 확인하세요.</span>
       </div>
       <el-row :gutter="16">
         <el-col
-          v-for="highlight in menu.highlights"
+          v-for="highlight in menu.highlights ?? []"
           :key="highlight.label"
           :xs="24"
           :sm="12"
@@ -37,7 +37,7 @@
       </div>
       <el-row :gutter="16" class="tasks-grid">
         <el-col
-          v-for="task in menu.tasks"
+          v-for="task in menu.tasks ?? []"
           :key="task.title"
           :xs="24"
           :md="12"
@@ -70,7 +70,7 @@
       </div>
       <el-collapse>
         <el-collapse-item
-          v-for="guide in menu.guides"
+          v-for="guide in menu.guides ?? []"
           :key="guide.title"
           :title="guide.title"
           :name="guide.title"

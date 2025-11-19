@@ -25,13 +25,15 @@ export interface MenuGuide {
 
 export interface AdminMenu {
   key: string
+  routeName: string
+  path: string
   label: string
   description: string
   icon: Component
   primaryAction?: string
   secondaryAction?: string
-  highlights: MenuHighlight[]
-  tasks: MenuTask[]
+  highlights?: MenuHighlight[]
+  tasks?: MenuTask[]
   guides?: MenuGuide[]
   footnote?: string
 }
